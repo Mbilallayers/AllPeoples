@@ -11,6 +11,7 @@
 /* GLOBAL STYLES */
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
 }
 p, li, h4 {
     font-family: 'Mulish', sans-serif;
@@ -452,4 +453,11 @@ border-radius: 100px;
 }
 #progress-num .step.active .icon .fa {
     color: #fff;
+}
+.team-member img{
+    max-height: 240px;
+}
+.team-member  {
+    margin-bottom: 40px;;
+    text-align: center;
 }
