@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marty New Landing Page</title>    
+    <title>All Peoples RFP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <body>
 
     <div class="main">
-        <header>
+        <header id="header" class="header">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light pt-5 pb-4">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,9 +29,9 @@
                                     About
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item active" href="index.html">Executive Summary</a>
-                                    <a class="dropdown-item" href="#">Team</a>
-                                    <a class="dropdown-item" href="#">Experience</a>
+                                    <a class="dropdown-item" href="#home-section">Executive Summary</a>
+                                    <a class="dropdown-item" href="#team">Team</a>
+                                    <a class="dropdown-item" href="#experience">Experience</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
@@ -39,23 +39,26 @@
                                     Build
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Build Approach</a>
-                                    <a class="dropdown-item" href="#">Timeline</a>
-                                    <a class="dropdown-item" href="fees.html">Fees</a>
+                                    <a class="dropdown-item" href="#build-approach">Build Approach</a>
+                                    <a class="dropdown-item" href="#timeline">Timeline</a>
+                                    <a class="dropdown-item" href="/scopeofwork">Fees (SOW)</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Client Portfolio</a>
+                                <a class="nav-link" href="#client-portfolio">Client Portfolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Additional Services</a>
+                                <a class="nav-link" href="#additional-services">Additional Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/scopeofwork">Scope of Work</a>
                             </li>
                           </ul>
                     </div>
                   </nav>
             </div>
         </header>
-        <div class="hero-section padding">
+        <div class="hero-section padding" id="home-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
@@ -66,8 +69,8 @@
                             </p>
                             <br />
                            <p>
-                               
-Our goal is to help organizations of all types grow and prosper through effective online presence & strategies that focus on precise audience engagement, brand equity, innovative technologies, and an emphasize focus on community-based businesses.
+                            Our goal is to help organizations of all types grow and prosper through an effective online presence. Our strategies are to focus on precise audience engagement, brand equity, innovative technologies, and social impact.                          
+<!-- Our goal is to help organizations of all types grow and prosper through effective online presence & strategies that focus on precise audience engagement, brand equity, innovative technologies, and an emphasize focus on community-based businesses. -->
                            </p>   
                         
 
@@ -82,7 +85,7 @@ Our goal is to help organizations of all types grow and prosper through effectiv
         </div>
     </div>
     <!-- team section -->
-    <div class="team-section position-relative padding d-flex justify-content-center flex-column align-items-center">
+    <div id="team" class="team-section position-relative padding d-flex justify-content-center flex-column align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -131,7 +134,7 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
         </div>
     </div>
     <!-- professional experience section -->
-    <div class="professional-section position-relative padding">
+    <div id="experience" class="professional-section position-relative padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -139,9 +142,8 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
                         <h2 class="page-header line l-purple">Professional Experience</h2>
                         <div class="wrap-content">
                             <p>MARTY has a commitment to providing top tier marketing and web design services
-                                to non-profit and community focused organizations of  South LA. One of MARTY’s primary goals is to boost the stature and online presence of these organizations 
-                                in order to elevate and help to amplify their messages and missions. VSEDC 
-                                ( Vermont Slauson Economic Development Corporation ) is one of MARTY’s  longest standing clients, for whom MARTY has utilized its web design services to build out impactful Special Projects.
+                                to non-profit and community focused organizations of South LA. One of MARTY’s primary goals is to boost the stature and online presence of these organizations 
+                                in order to elevate and help to amplify their messages and missions. VSEDC (Vermont Slauson Economic Development Corporation) is one of MARTY’s longest standing clients, for whom MARTY has utilized its web design services to build out impactful Special Projects.
                                 <br /><br />
                                 During holiday season 2021 on behalf of VSEDC’s Legacy 
                                 Business Program, MARTY deployed the Shop Love 
@@ -166,7 +168,7 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
         </div>
     </div>
     <!-- website build section -->
-    <div class="website-build-section position-relative padding">
+    <div id="build-approach" class="website-build-section position-relative padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -208,7 +210,7 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
         </div>
     </div>
     <!-- client reference section -->
-    <div class="client-reference-section position-relative padding">
+    <div id="client-portfolio" class="client-reference-section position-relative padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -324,7 +326,7 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
         </div>
     </div>
     <!-- additional services section experience section -->
-    <div class="additional-services-section position-relative padding">
+    <div id="additional-services" class="additional-services-section position-relative padding">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-md-6">
@@ -419,7 +421,7 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
         </div>
     </div>
     <!-- timeline section -->
-    <div class="timeline-section position-relative padding">
+    <div id="timeline" class="timeline-section position-relative padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -588,10 +590,10 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
                 <div class="col-md-7">
                     <div class="leftSide h-100">
                         <ul class="nav d-flex align-items-center h-100">
-                            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Build</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Client Portfolio</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Additional Services</a></li>
+                            <li class="nav-item"><a href="#home-section" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="#build-approach" class="nav-link">Build</a></li>
+                            <li class="nav-item"><a href="#client-portfolio" class="nav-link">Client Portfolio</a></li>
+                            <li class="nav-item"><a href="#additional-services" class="nav-link">Additional Services</a></li>
                         </ul>
                     </div>
                 </div>
@@ -607,6 +609,15 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function(){
+        var sticky = $('.header'),
+            scroll = $(window).scrollTop();
+
+            if (scroll >= 100) sticky.addClass('fixed');
+                else sticky.removeClass('fixed');
+            });
+    </script>
 </body>
 </html>
 

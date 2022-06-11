@@ -99,7 +99,7 @@ h5, h6 {
     position: relative;
 }
 .wrap-content p {
-    text-align: justify;
+    /* text-align: justify; */
 }
 .wrap-content p img {
     max-width: 300px;
@@ -115,6 +115,35 @@ h5, h6 {
 .nav-link {
     font-size: 18px;
 }
+.nav-link.active {
+    color: #f00 !important;
+    font-weight: 500;
+}
+.header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s ease-in-out;
+}
+.header .navbar {
+    transition: .3s ease-in-out;
+    /* padding-top: 2.5rem; */
+}
+.header.fixed  {
+    box-shadow: 0 -5px 8px;
+    background: #fff;
+}
+.header.fixed .navbar {
+    padding-top: 2rem !important;
+}
+/* .header.fixed .main-vsedc-logo {
+    max-width: 95px;
+}
+.header.fixed .main-bb-logo {
+    max-width: 350px;
+} */
 /* HERO SECTION */
 .main {
     position: relative;
@@ -719,7 +748,9 @@ border-radius: 100px;
     z-index: -1;
 }
 
-
+.footer-section .rightSide img {
+    max-width: 200px;
+}
 
 .main-fees {
     position: relative;
@@ -885,6 +916,20 @@ border-radius: 100px;
     .padding {
         padding: 2rem 0;
     }
+    .navbar-collapse {
+        background: #fff;
+        /* padding: 30px 0; */
+        transition: .3s ease-in-out;
+    }
+    
+    .navbar-collapse.show {
+        background: #fff;
+        /* padding: 30px 0; */
+        transition: .3s ease-in-out;
+    }
+    .main .hero-section {
+        margin: 100px 0;
+    }
     .line:before {
         display: none;
     }
@@ -923,7 +968,7 @@ border-radius: 100px;
     }
     .footer-section .nav-link {padding-left: 0 !important;padding-right: 0 !important;}
     .navbar {
-        padding: 30px 0px 0px 0px !important;
+        padding: 30px 0px !important;
     }
     .client-reference-section:after {
         top: 20% !important;
