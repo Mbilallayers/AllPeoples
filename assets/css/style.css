@@ -98,9 +98,6 @@ h5, h6 {
 .wrap-content {
     position: relative;
 }
-.wrap-content p {
-    /* text-align: justify; */
-}
 .wrap-content p img {
     max-width: 300px;
     position: absolute;
@@ -118,6 +115,9 @@ h5, h6 {
 .nav-link.active {
     color: #f00 !important;
     font-weight: 500;
+}
+.text-link {
+    color: #f00;
 }
 .header {
     position: fixed;
