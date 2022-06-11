@@ -185,6 +185,7 @@ h5, h6 {
 }
 .client-box-body img { 
     min-height: 270px;
+    object-fit: cover;
 }
 .bbttc, .misla-job, .hot-and-cool, .shop-love, .gritly, .vsedc-sgg {
     position: relative;
@@ -331,8 +332,11 @@ h5, h6 {
 }
 .service-box {
     transition: all 2s ease-in-out;
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 20px;
+}
+.service-box a {
+    border: none;
 }
 .service-box:hover .service-image.smm-cc img {
     background: linear-gradient(to top, #0d92a5 20%, #CCFF33);
@@ -946,9 +950,9 @@ border-radius: 100px;
 .fees .main-fees:before {
     bottom: 20%;
 }
-.fees ul {
+/* .fees ul {
     padding: 0;
-}
+} */
 
 .fees ul li  {
     word-wrap: break-word;
