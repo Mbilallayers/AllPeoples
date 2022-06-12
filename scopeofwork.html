@@ -28,33 +28,33 @@
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" name="about" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                                     About
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/#executive-summary">Executive Summary</a>
-                                    <a class="dropdown-item" href="/#team">Team</a>
-                                    <a class="dropdown-item" href="/#experience">Experience</a>
+                                    <a class="dropdown-item" name="executive-summary" href="/#executive-summary">Executive Summary</a>
+                                    <a class="dropdown-item" name="team" href="/#team">Team</a>
+                                    <a class="dropdown-item" name="experience" href="/#experience">Experience</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" name="build" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                                     Build
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/#build-approach">Build Approach</a>
-                                    <a class="dropdown-item" href="/#timeline">Timeline</a>
-                                    <a class="dropdown-item" href="/scopeofwork">Fees (SOW)</a>
+                                    <a class="dropdown-item" name="build-approach" href="/#build-approach">Build Approach</a>
+                                    <a class="dropdown-item" name="timeline" href="/#timeline">Timeline</a>
+                                    <a class="dropdown-item" name="scopeofwork" href="/scopeofwork">Fees (SOW)</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/#client-portfolio">Client Portfolio</a>
+                                <a class="nav-link" name="client-portfolio" href="/#client-portfolio">Client Portfolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/#additional-services">Additional Services</a>
+                                <a class="nav-link" name="additional-services" href="/#additional-services">Additional Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="/scopeofwork">Scope of Work</a>
+                                <a class="nav-link" name="scopeofwork" href="/scopeofwork">Scope of Work</a>
                             </li>
                         </ul>
                     </div>
@@ -317,12 +317,91 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script>
         $(window).scroll(function(){
-        var sticky = $('.header'),
+            var sticky = $('.header'),
             scroll = $(window).scrollTop();
-
             if (scroll >= 100) sticky.addClass('fixed');
-                else sticky.removeClass('fixed');
+            else sticky.removeClass('fixed');
+        });
+        if (window.innerWidth !== undefined && window.innerWidth < 767) {
+            $('.nav-item').on('click', function(event) {
+                console.log(event.target, 'Nav item');
+                if (!event.target.classList.contains('dropdown-toggle')) {
+                    let navbarToggler = $('.navbar-toggler');
+                    if (navbarToggler.hasClass('collapsed')) {
+                        navbarToggler.remove('collapsed');
+                    } else {
+                        navbarToggler.addClass('collapsed');
+                    }
+                    let navbarCollapse = $('.navbar-collapse');
+                    if (navbarCollapse.hasClass('show')) {
+                        navbarCollapse.addClass('collapsing');
+                        setTimeout(() => {
+                            navbarCollapse.removeClass('collapsing')
+                            navbarCollapse.removeClass('show')
+                        }, 200);
+                    } else {
+                        navbarCollapse.addClass('collapsing');
+                        setTimeout(() => {
+                            navbarCollapse.removeClass('collapsing')
+                            navbarCollapse.addClass('show')
+                        }, 200);
+                    }
+                    event.stopPropagation();
+                }
             });
+        }
+        $('.nav-item').on('click', function(event) {
+            let links = document.getElementsByClassName("nav-link");
+            let dropdownLinks = document.getElementsByClassName("dropdown-item");
+            if (!event.target.classList.contains('dropdown-toggle')) {
+                activeNavbarItem(links, event);
+            }
+            if (!event.target.classList.contains('dropdown-toggle')) {
+                activeNavbarItem(dropdownLinks, event);
+            }
+        });
+        function activeNavbarItem(elements, event) {
+            for (let j = 0; j < elements.length; j++) {
+                let $this = elements[j];
+                let hrefUrl = $this.getAttribute('href').split('#')[$this.getAttribute('href').split('#').length - 1];
+                let nameValue = event.target.getAttribute('name');
+                if(hrefUrl === nameValue) {
+                    if (!$this.classList.contains('active')) {
+                        $this.classList.add('active');
+                    }
+                } else {
+                    $this.classList.remove('active');
+                }
+            }
+        }
+        $(function() {
+            let links = document.getElementsByClassName("nav-link");
+            let dropdownLinks = document.getElementsByClassName("dropdown-item");
+            let nameValue = location.hash.split('#')[location.hash.split('#').length - 1];
+            onloadActiveNavbarItem(links, nameValue);
+            onloadActiveNavbarItem(dropdownLinks, nameValue);
+            if (nameValue !== '') {
+                window.scrollTo(0, $('#'+ nameValue).offset().top);
+            }
+        });
+        function onloadActiveNavbarItem(elements, nameValue) {
+            for (let j = 0; j < elements.length; j++) {
+                let $this = elements[j];
+                let hrefUrl = $this.getAttribute('href').split('#')[$this.getAttribute('href').split('#').length - 1];
+                if (nameValue !== '') {
+                    if(hrefUrl === nameValue) {
+                        if (!$this.classList.contains('active')) {
+                            $this.classList.add('active');
+                        }
+                    } else {
+                        $this.classList.remove('active');
+                    }
+                }
+            }
+            // $('body').animate({
+            
+            // }, 'slow');
+        }
     </script>
 </body>
 </html>

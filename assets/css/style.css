@@ -116,7 +116,7 @@ h5, h6 {
     color: #f00 !important;
     font-weight: 500;
 }
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active {
     color: #f00;
     font-weight: 500;
     background: transparent;
