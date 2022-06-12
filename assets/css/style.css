@@ -902,8 +902,17 @@ border-radius: 100px;
 }
 
 
+.fees .hero-section .list-box {
+    min-height: 350px;
+}
 
-
+.fees .budget-list .budget-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 
 @media (max-width: 768px) {
@@ -917,6 +926,15 @@ border-radius: 100px;
     }
     .main:after {
         position: relative;
+    }
+    .fees .budget-list .budget-list-item  {
+        flex-wrap: wrap;
+        display: block;
+    }
+    .fees .budget-list .budget-list-item .budget {
+        /* flex-wrap: wrap; */
+        /* display: block; */
+        float: right;
     }
     .padding {
         padding: 6rem 0;
