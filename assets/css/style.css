@@ -121,8 +121,9 @@ h5, h6 {
     font-weight: 500;
     background: transparent;
 }
-.text-link {
-    color: #f00;
+.text-link:hover {
+    font-weight: 500;
+    /* color: #f00; */
 }
 .header {
     position: fixed;
@@ -832,7 +833,7 @@ border-radius: 100px;
     text-transform: capitalize;
 }
 .feature-page-include-section .list-box {
-    min-height: 370px;
+    min-height: 400px;
 }
 
 .fees .padding {
@@ -916,6 +917,10 @@ border-radius: 100px;
 
 
 @media (max-width: 768px) {
+    
+.fees .budget-list .budget-list-item span:first-child {
+    width: 70%;
+}
     h1 {
         font-size: 50px;
         line-height: 60px;
@@ -929,12 +934,12 @@ border-radius: 100px;
     }
     .fees .budget-list .budget-list-item  {
         flex-wrap: wrap;
-        display: block;
+        display: flex;
     }
     .fees .budget-list .budget-list-item .budget {
         /* flex-wrap: wrap; */
         /* display: block; */
-        float: right;
+        float: none;
     }
     .padding {
         padding: 6rem 0;
