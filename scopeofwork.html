@@ -581,8 +581,8 @@
             let nameValue = location.hash.split('#')[location.hash.split('#').length - 1];
             if (location.hash === '') {
                 let scopeOfWorkPage = location.pathname.split('/')[location.hash.split('/').length - 1];
+                console.log(scopeOfWorkPage, 'Test');
             }
-            console.log(scopeOfWorkPage, 'Test');
             onloadActiveNavbarItem(links, nameValue, scopeOfWorkPage);
             onloadActiveNavbarItem(dropdownLinks, nameValue, scopeOfWorkPage);
             if (nameValue !== '') {
