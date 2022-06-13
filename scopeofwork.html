@@ -485,10 +485,10 @@
                 <div class="col-md-7">
                     <div class="leftSide h-100">
                         <ul class="nav d-flex align-items-center h-100">
-                            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Build</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Client Portfolio</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">Additional Services</a></li>
+                            <li class="nav-item"><a href="/#executive-summary" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="/#build-approach" class="nav-link">Build</a></li>
+                            <li class="nav-item"><a href="/#client-portfolio" class="nav-link">Client Portfolio</a></li>
+                            <li class="nav-item"><a href="/#additional-services" class="nav-link">Additional Services</a></li>
                         </ul>
                     </div>
                 </div>
@@ -580,13 +580,13 @@
             let dropdownLinks = document.getElementsByClassName("dropdown-item");
             let nameValue = location.hash.split('#')[location.hash.split('#').length - 1];
             if (location.hash === '') {
-                let scopeOfWorkPage = location.pathname.split('/')[location.hash.split('/').length - 1];
-                console.log(scopeOfWorkPage, 'Test');
-            }
-            onloadActiveNavbarItem(links, nameValue, scopeOfWorkPage);
-            onloadActiveNavbarItem(dropdownLinks, nameValue, scopeOfWorkPage);
-            if (nameValue !== '') {
-                window.scrollTo(0, $('#'+ nameValue).offset().top);
+                let scopeOfWorkPage = location.pathname.split('/');
+                console.log(scopeOfWorkPage[scopeOfWorkPage.length - 1], 'Test');
+                onloadActiveNavbarItem(links, nameValue, scopeOfWorkPage);
+                onloadActiveNavbarItem(dropdownLinks, nameValue, scopeOfWorkPage);
+                if (nameValue !== '') {
+                    window.scrollTo(0, $('#'+ nameValue).offset().top);
+                }
             }
         });
         function onloadActiveNavbarItem(elements, nameValue, scopeOfWorkPage) {
