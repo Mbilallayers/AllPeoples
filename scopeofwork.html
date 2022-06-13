@@ -485,10 +485,20 @@
                 <div class="col-md-7">
                     <div class="leftSide h-100">
                         <ul class="nav d-flex align-items-center h-100">
-                            <li class="nav-item"><a href="/#executive-summary" class="nav-link">About</a></li>
-                            <li class="nav-item"><a href="/#build-approach" class="nav-link">Build</a></li>
-                            <li class="nav-item"><a href="/#client-portfolio" class="nav-link">Client Portfolio</a></li>
-                            <li class="nav-item"><a href="/#additional-services" class="nav-link">Additional Services</a></li>
+                            <li class="nav-item"><a href="https://marty.world/#donate" target="_blank" rel="noopener noreferrer" class="nav-link">Donate</a></li>
+                            <li class="nav-item"><a href="https://calendly.com/martyw0rld/30min?back=1&month=2022-06" target="_blank" rel="noopener noreferrer" class="nav-link">Schedule Meeting</a></li>
+                            <li class="nav-item"><a href="https://www.instagram.com/marty.w0rld/" target="_blank" rel="noopener noreferrer" class="nav-link">
+                                <i class="fa-brands fa-instagram"></i>
+                                Instagram
+                            </a></li>
+                            <li class="nav-item"><a href="https://www.facebook.com/martyw0rld/" target="_blank" rel="noopener noreferrer" class="nav-link">
+                                <i class="fa-brands fa-facebook"></i>
+                                Facebook
+                            </a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">
+                                <i class="fa-brands fa-youtube"></i>
+                                Youtube
+                            </a></li>
                         </ul>
                     </div>
                 </div>
@@ -582,8 +592,8 @@
             if (location.hash === '') {
                 let scopeOfWorkPage = location.pathname.split('/');
                 console.log(scopeOfWorkPage[scopeOfWorkPage.length - 1], 'Test');
-                onloadActiveNavbarItem(links, nameValue, scopeOfWorkPage);
-                onloadActiveNavbarItem(dropdownLinks, nameValue, scopeOfWorkPage);
+                onloadActiveNavbarItem(links, nameValue, scopeOfWorkPage[scopeOfWorkPage.length - 1]);
+                onloadActiveNavbarItem(dropdownLinks, nameValue, scopeOfWorkPage[scopeOfWorkPage.length - 1]);
                 if (nameValue !== '') {
                     window.scrollTo(0, $('#'+ nameValue).offset().top);
                 }
