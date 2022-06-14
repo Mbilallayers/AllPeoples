@@ -679,6 +679,16 @@
                 }
             }
         }
+        function onElementFocused(e)
+        {
+            if (e && e.target) {
+                document.activeElement.blur();
+                // document.activeElement = e.target == document ? null : e.target;
+            }
+        }
+        if (document.addEventListener) {
+            document.addEventListener("focus", onElementFocused, true);
+        }
     </script>
 </body>
 </html>

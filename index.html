@@ -497,6 +497,7 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
         function onloadActiveNavbarItem(elements, nameValue) {
             for (let j = 0; j < elements.length; j++) {
                 let $this = elements[j];
+                $this.blur();
                 let hrefUrl = $this.getAttribute('href').split('#')[$this.getAttribute('href').split('#').length - 1];
                 if (nameValue !== '') {
                     if(hrefUrl === nameValue) {
@@ -511,6 +512,16 @@ Joshua Tichauer who is well versed in multi-million dollar build outs, Lead Deve
             // $('body').animate({
             
             // }, 'slow');
+        }
+        function onElementFocused(e)
+        {
+            if (e && e.target) {
+                document.activeElement.blur();
+                // document.activeElement = e.target == document ? null : e.target;
+            }
+        }
+        if (document.addEventListener) {
+            document.addEventListener("focus", onElementFocused, true);
         }
     </script>
 </body>
