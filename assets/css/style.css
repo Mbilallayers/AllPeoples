@@ -113,7 +113,7 @@ h5, h6 {
     font-size: 18px;
 }
 .nav-link.active {
-    color: #f00 !important;
+    /* color: #f00 !important; */
     font-weight: 500;
 }
 .dropdown-item.active {
