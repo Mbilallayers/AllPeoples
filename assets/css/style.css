@@ -422,20 +422,25 @@ h5, h6 {
     transition: 2s ease-in-out;
 }
 /* timeline section */
-.timeline-box {
-    /* padding: 25px; */
+.timeline-box, .list-box {
+    /* padding: 0; */
     box-shadow: 0px 16px 32px rgb(0 0 0 / 5%);
+    /* background:transparent; */
 }
-.timeline-box h6 {
+.fees .terms-and-conditions-section .list-box {
+    padding: 0;
+}
+.timeline-box h6, .list-box h6 {
     font-size: 24px;
     margin-bottom: 25px;
     font-weight: 700;
     padding: 25px;
+    width: 100%;
     background: #fff;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     position: relative;
 }
-.timeline-box h6:before {
+.timeline-box h6:before, .list-box h6:before {
     content: "";
     position: absolute;
     top: 0;
@@ -444,8 +449,7 @@ h5, h6 {
     right: 0;
     background-color:#CCFF33;
 }
-
-.timeline-box .content {
+.timeline-box .content, .list-box .content {
     padding: 25px;
 }
 /* footer section */
@@ -854,7 +858,7 @@ border-radius: 100px;
     text-transform: capitalize;
 }
 
-.fees .terms-and-conditions-section .list-box:before {
+.fees .terms-and-conditions-section .list-box h6:before {
     background-color: #D02030;
 }
 
