@@ -430,6 +430,21 @@ h5, h6 {
 .fees .terms-and-conditions-section .list-box {
     padding: 0;
 }
+.fees .website-build-section .list-box {
+    min-height: 230px;
+}
+.total-amount {
+    position: relative;
+}
+.total-amount:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 1px;
+    background: #444;
+    width: 145px;
+}
 .timeline-box h6, .list-box h6 {
     font-size: 24px;
     margin-bottom: 25px;
